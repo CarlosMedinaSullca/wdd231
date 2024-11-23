@@ -61,12 +61,16 @@ h1 {
 }
 
 .navigation a:hover {
-    background-color: var(--primary-color2);
     font-weight: 700;
 }
 
 .open a {
     display: block;
+}
+
+.navigation .current-menu-item {
+    background-color: var(--primary-color1);
+    color: var(--primary-color2);
 }
 
 img {
