@@ -1,0 +1,165 @@
+:root {
+    --primary-color1: rgb(43, 123, 156);
+    --primary-color2: rgb(10, 64, 64);
+    --primary-color3: rgb(43, 131, 140);
+    --secondary-color1: rgb(169, 237, 244);
+    --secondary-color2: rgb(147, 183, 191);
+    --secondary-color3: rgb(13, 13, 13);
+    --secondary-color4: rgb(242, 242, 242);
+    --accent1-color: rgb(248, 83, 7);
+    --accent2-color: rgb(189, 97, 192);
+
+    --heading-font: "Playfair Display", serif; 
+    --paragraph-font: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    padding: 2rem;
+    background-color: var(--primary-color3);  
+    color: var(--secondary-color4);  
+    font-size: larger;
+}
+h1 {
+    font-family: var(--heading-font);
+}
+
+main {
+    display: grid;
+    grid-template: auto/auto;
+    background-color: var(--secondary-color4);
+    padding: 2rem;
+}
+
+h2, h3 {
+    padding:1rem;
+    color: var(--secondary-color3);
+    font-family: var(--heading-font);
+}
+
+main p {
+    font-family: var(--paragraph-font);
+    color: var(--secondary-color3);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.priColors {
+    display: grid;
+    grid-template: auto auto auto/ 1fr 1fr 1fr;
+}
+.priColors h3 {
+    grid-column: 1/4;
+}
+.priColors p:nth-child(2) {
+    grid-column: 1/2;
+    background-color: var(--primary-color1);
+    padding:2rem;
+    color: var(--secondary-color4);
+}
+.priColors p:nth-child(3) {
+    grid-column: 2/3;
+    background-color: var(--primary-color2);
+    padding:2rem;
+    color: var(--secondary-color4);
+}
+.priColors p:nth-child(4) {
+    grid-column: 3/4;
+    background-color: var(--primary-color3);
+    padding:2rem;
+    color: var(--secondary-color4);
+}
+.priColors :last-child {
+    grid-column: 1/4;
+    padding: 1rem;
+    
+}
+
+.secColors {
+    display: grid;
+    grid-gap:0.5rem;
+    grid-template: auto auto auto/ 1fr 1fr 1fr 1fr;
+}
+.secColors h3 {
+    grid-column: 1/5;
+}
+.secColors p:nth-child(2) {
+    grid-column: 1/2;
+    background-color: var(--secondary-color1);
+    padding:2rem;
+
+}
+.secColors p:nth-child(3) {
+    grid-column: 2/3;
+    background-color: var(--secondary-color2);
+    padding:2rem;
+}
+.secColors p:nth-child(4) {
+    grid-column: 3/4;
+    background-color: var(--secondary-color3);
+    padding:2rem;
+    color: var(--secondary-color4);
+}
+.secColors p:nth-child(5) {
+    grid-column: 4/5;
+    background-color: var(--secondary-color4);
+    padding:2rem;
+    border: 1px solid;
+}
+.secColors :last-child {
+    grid-column: 1/5;
+    padding: 1rem;
+}
+
+.acColors {
+    display: grid;
+    grid-template: auto auto auto/ 1fr 1fr;
+}
+.acColors h3 {
+    grid-column: 1/3;
+}
+.acColors p:nth-child(2) {
+    grid-column: 1/2;
+    background-color: var(--accent1-color);
+    padding:2rem;
+}
+.acColors p:nth-child(3) {
+    grid-column: 2/3;
+    background-color: var(--accent2-color);
+    padding:2rem;
+}
+.acColors :last-child {
+    grid-column: 1/3;
+    padding: 1rem;
+}
+
+.tipo {
+    display: grid;
+}
+
+.tipo p:nth-child(2) {
+    font-size:x-large;
+}
+.tipo p:last-child {
+    font-family: var(--heading-font);
+    font-size: x-large;
+}
+
+footer {
+    background-color: var(--secondary-color3);
+    color: var(--secondary-color4);
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p {
+    font-family: var(--paragraph-font);
+}
