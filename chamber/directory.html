@@ -17,14 +17,56 @@
     <meta name="twitter:description" content="This is the course home page for WDD231 subject" />
     <meta name="twitter:image" content="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/vavqg3zbynb231htiyr6"/>
     <title>Bolivia Chamber of commerce-Directory page</title>
-    <link href="styles/dynamic.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="styles/chamber.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-    <script src="scripts/homepage.js" defer></script>
+    <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
-    
+        <header>
+            <div>
+                <img src="images/logochamber.webp" alt="A logo of Bolivia chamber of commerce">         
+            </div>
+            <button id="hamMenu"></button>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a href="#" title="Directory" class="current-menu-item">Directory</a></li>
+                    <li><a href="#" title="Join">Join</a></li>
+                    <li><a href="#" title="Discover">Discover</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Business Directory</h1>
+            <div class="menu">
+                <button id="grid">⏹️Grid</button>
+                <button id="list">📄List</button>
+            </div>
+            <article class="grid">
+            </article>
+        </main>
+        <footer>
+            <div class="info first">
+                <p><strong>Bolivia chamber of commerce</strong></p>
+                <p>Isaac Attie street 420</p>
+                <p>info@boliviacc.org</p>
+                <p>+59172969309</p>
+            </div>
+            <div>
+                <img src="images/face.webp" alt="Facebook Logo">
+                <img src="images/in.webp" alt="LinkedInLogo">
+                <img src="images/you.webp" alt="YouTube Logo">
+            </div>
+            <div class="info">
+                <p>WDD231 Class Project</p>
+                <p>Carlos Medina</p>
+                <p>&copy; <span id="currentyear"></span> Bolivia chamber of commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
 </body>
 </html>

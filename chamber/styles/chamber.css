@@ -1,0 +1,234 @@
+:root {
+    --primary-color1: rgb(43, 123, 156);
+    --primary-color2: rgb(10, 64, 64);
+    --primary-color3: rgb(43, 131, 140);
+    --secondary-color1: rgb(169, 237, 244);
+    --secondary-color2: rgb(147, 183, 191);
+    --secondary-color3: rgb(13, 13, 13);
+    --secondary-color4: rgb(242, 242, 242);
+    --accent1-color: rgb(248, 83, 7);
+    --accent2-color: rgb(189, 97, 192);
+
+    --heading-font: "Playfair Display", serif; 
+    --paragraph-font: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0 auto;
+    font-family: "Roboto", serif;
+}
+
+header {
+    background-color: var(--secondary-color2);
+    padding: 0.2rem; 
+}
+
+header div {   
+    padding: 0.5rem;
+}
+
+#hamMenu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--primary-color2);
+    position: absolute;
+    top: 0.1rem;
+    right: 1rem;
+}
+
+#hamMenu::before {
+    content: "≡";
+    font-size: 2.5rem;
+}
+
+#hamMenu.open::before{
+    content: "↗";
+}
+
+.navigation {
+    display: grid;
+    grid-template-rows: 0fr;
+    background-color: var(--primary-color3);
+    transition: grid-template-rows 0.5s ease-out;   
+}
+.navigation li {
+    list-style-type: none;
+    
+}
+.navigation ul {
+    overflow: hidden;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+.navigation a {
+    padding: 0.2rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary-color4);
+    width: 100%;
+}
+
+.navigation a:hover {
+    font-weight: 700;
+}
+
+
+
+.navigation .current-menu-item {
+    background-color: var(--secondary-color4);
+    color: var(--primary-color2);
+}
+
+footer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: start;
+    text-align: left;
+    padding: 1rem 0;
+    background-color: var(--secondary-color2);
+}
+
+footer div {
+    padding: 0.5rem;
+}
+
+footer .info {
+    width: 100%;
+}
+
+footer img {
+    padding: 0.8rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;     
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color1);    
+}
+
+.menu button {
+    border: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.grid section {
+    margin: 0.7rem;
+    display: grid;
+    grid-template: auto auto auto auto auto/ 1fr 1fr;
+    padding: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.grid section h2 {
+    grid-column: 1/4;
+    text-align: center;
+    background-color: var(--primary-color1);
+    color: var(--secondary-color4);
+    align-self: center;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.grid section img {
+    grid-column: 1/2;
+    grid-row: 2/6;
+    width: 80%;
+}
+
+.grid section :nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: left;
+    width: 100%;  
+}
+.grid section :nth-child(4) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: left;    
+    width: 100%;  
+}
+.grid section :nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    text-align: left; 
+    width: 100%;    
+}
+.grid section :nth-child(6) {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    text-align: left; 
+    width: 100%;   
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list section {
+    display: flex;
+    flex-direction: row;
+}
+
+.list section img {
+    display: none;
+}
+
+.list section h2 {
+    background-color: white;
+    color: var(--primary-color1);
+}
+
+
+
+@media (min-width: 40em) {
+
+    #hamMenu {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 2fr;       
+    }
+    
+    .navigation {
+        grid-template-rows: 1fr;
+    }
+    .navigation ul{
+        align-items: end;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        background-color: var(--secondary-color2);
+    }
+    
+    .navigation li {
+        padding: 0 1rem;
+        
+    }  
+    
+    .navigation a {
+        color: var(--primary-color2);
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 1rem 2rem;
+    }
+}
