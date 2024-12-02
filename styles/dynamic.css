@@ -179,7 +179,7 @@ footer p {
     }
     main{
         display: grid;
-        grid-template: auto auto/ 1fr 1fr 1fr;
+        grid-template: auto auto auto/ 1fr 1fr 1fr;
         width: 90%;
         margin-bottom: 1rem;
     }
@@ -198,6 +198,10 @@ footer p {
     }
     .third {
         grid-column: 1/4;
+    }
+
+    .fourth {
+        grid-column: 2/3;
     }
 
     .courses {
