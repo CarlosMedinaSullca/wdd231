@@ -51,7 +51,7 @@
             "phone": "22850851",
             "website": "https://www.fabricalaestrella.com/",
             "image": "https://www.fabricalaestrella.com/img/logos/logo_rojo_laestrella.webp",
-            "membershipLevel": "Member",
+            "membershipLevel": "Silver",
             "city": "La Paz"
         },
         {
@@ -60,7 +60,7 @@
             "phone": "25288006",
             "website": "https://sfida.com.bo/",
             "image": "https://sfida.com.bo/wp-content/uploads/2018/04/InspectorPie-300x236.png",
-            "membershipLevel": "Member",
+            "membershipLevel": "Silver",
             "city": "Oruro"
         }
     ]

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the directory page for the chamber of commerce of Bolivia">
+    <meta name="author" content="Carlos Medina">
+    <meta property="og:title" content="Course Home page - Carlos Medina"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://carlosmedinasullca.github.io/wdd231/chamber/images/logochamber.webp"/>
+    <meta property="og:url" content="https://carlosmedinasullca.github.io/wdd231/chamber/directory.html"/>
+    <meta property="og:description" content="This is the course home page for WDD231 subject"/>
+    <meta property="fb:app_id" content="your_app_id"/>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Course Home page - Carlos Medina" />
+    <meta name="twitter:description" content="This is the course home page for WDD231 subject" />
+    <meta name="twitter:image" content="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/vavqg3zbynb231htiyr6"/>
+    <title>Bolivia Chamber of commerce-Home page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="styles/chamber.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/chamber.js" defer></script>
+</head>
+<body class="home">
+        <header>
+            <div>
+                <img src="images/logochamber.webp" alt="A logo of Bolivia chamber of commerce">         
+            </div>
+            <button id="hamMenu"></button>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#" title="Home" class="current-menu-item">Home</a></li>
+                    <li><a href="directory.html" title="Directory">Directory</a></li>
+                    <li><a href="#" title="Join">Join</a></li>
+                    <li><a href="#" title="Discover">Discover</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <div>
+                    <h1>Find your next gold </br>partner here!</h1>
+                    <p><strong>key contacts, make your Business visible</br> to important markets all over the country!</strong></p>
+                    <a href="Join.html" title="Join page">Join us!</a>
+                </div>
+                <picture>
+                    <source srcset="images/hero-large.webp" media=" (min-width: 800px) ">
+                    <img src="images/hero-small.webp" alt="A car in the middle of salar de Uyuni" width="1500" height="750">
+                </picture>
+                                
+            </section>
+            <section class="info">
+                <div class="inside">
+                    <h2>Events</h2>
+                </div>
+                <div class="inside weather">
+                    <h2>Current Weather</h2>
+                    <div class="wedata">
+                        <figure>
+                          <img id="weather-icon" src="" alt="">
+                          <figcaption ></figcaption>
+                        </figure>
+                        <div>
+                            <p> <span id="current-temp"></span></p>
+                            <p> <span class="fig"></span></p>
+                            <p>High: <span id="high"></span></p>
+                            <p>Low: <span id="low"></span></p>
+                            <p>Humidity: <span id="humidity"></span></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="inside">
+                    <h2>Weather Forecast</h2>
+                    <div class="forecast">
+                        <p><span id="today"></span><span id="todayTemp"></span></p>
+                        <p><span id="tomorrow1"></span><span id="tomTemp1"></span></p>
+                        <p><span id="tomorrow2"></span><span id="tomTemp2"></span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="grid">
+                <div class="menu">
+                    <button id="grid">⏹️Grid</button>
+                    <button id="list">📄List</button>
+                </div>
+            </section>
+            <div class="spot"></div>            
+        </main>
+        <footer>
+            <div class="info first">
+                <p><strong>Bolivia chamber of commerce</strong></p>
+                <p>Isaac Attie street 420</p>
+                <p>info@boliviacc.org</p>
+                <p>+59172969309</p>
+            </div>
+            <div>
+                <img src="images/face.webp" alt="Facebook Logo">
+                <img src="images/in.webp" alt="LinkedInLogo">
+                <img src="images/you.webp" alt="YouTube Logo">
+            </div>
+            <div class="info">
+                <p>WDD231 Class Project</p>
+                <p>Carlos Medina</p>
+                <p>&copy; <span id="currentyear"></span> Bolivia chamber of commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+</body>
+</html>

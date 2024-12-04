@@ -6,6 +6,7 @@
     --secondary-color2: rgb(147, 183, 191);
     --secondary-color3: rgb(13, 13, 13);
     --secondary-color4: rgb(242, 242, 242);
+    --secondary-color5: rgba(242, 242, 242, 0.6);
     --accent1-color: rgb(248, 83, 7);
     --accent2-color: rgb(189, 97, 192);
 
@@ -14,7 +15,7 @@
 }
 
 * {
-    margin: 0 auto;
+    margin: 0 ;
     font-family: "Roboto", serif;
 }
 
@@ -54,6 +55,8 @@ header div {
 }
 .navigation li {
     list-style-type: none;
+    padding: 0.4rem;
+    text-align: center;
     
 }
 .navigation ul {
@@ -131,17 +134,18 @@ main h1 {
     padding: 1rem;
     align-items: center;
     gap: 0.5rem;
+    box-shadow: 0.1em 0 1em var(--primary-color2);
 }
 
 .grid section h2 {
     grid-column: 1/4;
     text-align: center;
-    background-color: var(--primary-color1);
+    background-color: var(--primary-color2);
     color: var(--secondary-color4);
     align-self: center;
     width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    /* border-top-left-radius: 8px;
+    border-top-right-radius: 8px; */
 }
 
 .grid section img {
@@ -196,7 +200,126 @@ main h1 {
 
 
 
-@media (min-width: 40em) {
+/* Rules to style the home page */
+
+.hero {
+    position: relative;
+}
+
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.hero h1 {    
+    /* position: absolute;
+    z-index: 1; */
+    color: var(--primary-color2);   
+    left: 2rem;
+    font-size: 1.4rem;
+}
+
+.hero p {
+    
+    color: var(--secondary-color4);
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--primary-color2);
+    font-size: small;
+}
+
+.hero a {
+    text-decoration: none;
+    position: absolute;
+    bottom: 2em;
+    left: 3em;
+    background-color: var(--primary-color2);
+    z-index: 1;
+    color: var(--secondary-color4);
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.inside {
+    height: 10rem;
+    box-shadow: 0.1em 0 1em var(--primary-color2);
+}
+
+.inside h2 {
+    text-align: center;
+    background-color: var(--primary-color2);
+    border-bottom: 1px solid var(--primary-color2);
+    color: var(--secondary-color4);
+    padding: 0.5rem;
+}
+
+.wedata {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.home .grid {
+    display: none;
+}
+
+.spot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.spot section {
+    margin: 0.7rem;
+    display: grid;
+    grid-template: auto auto auto auto auto/ 1fr 1fr;
+    padding: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0.1em 0 1em var(--primary-color2);
+}
+
+.spot section h2 {
+    grid-column: 1/4;
+    text-align: center;
+    background-color: var(--primary-color2);
+    color: var(--secondary-color4);
+    align-self: center;
+    width: 100%;
+    /* border-top-left-radius: 8px;
+    border-top-right-radius: 8px; */
+}
+
+.spot section img {
+    grid-column: 1/2;
+    grid-row: 2/6;
+    width: 80%;
+}
+
+
+@media (min-width: 800px) {
 
     #hamMenu {
         display: none;
@@ -230,5 +353,41 @@ main h1 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         padding: 1rem 2rem;
+    }
+
+    /* Rules to style the home page */
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+
+    .hero {
+        position: relative;
+    }
+
+    .hero h1 {
+        position: absolute;
+        left: 7em;
+        color: var(--secondary-color4);
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .hero p {
+        position: absolute;
+        top: 10em;
+        left: 21em;
+        color: var(--primary-color2);
+        background-color: var(--secondary-color5);
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .hero a {
+        position: absolute;
+        font-size: 2em;        
+        text-align: center;
     }
 }
