@@ -191,7 +191,6 @@ function randomMembers(list) {
                     let website = document.createElement('p');
                     let address = document.createElement('p');
                     let membership = document.createElement('p');
-                    let city = document.createElement('p')
 
  
                     fullName.textContent = `${members.name}`;
