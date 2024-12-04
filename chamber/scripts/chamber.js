@@ -118,8 +118,10 @@ function displayResults (data) {
     currentTemp.innerHTML = `${data.main.temp} &deg;C`;
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     let desc = data.weather[0].description;
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt',`${data.weather[0].description}`);
+    let iconIma = document.createElement('img');
+    iconIma.setAttribute('src', iconsrc);
+    iconIma.setAttribute('alt',`${data.weather[0].description}`);
+    weatherIcon.appendChild(iconIma);
     captionDesc.textContent = `${desc}`;
     high.textContent = `${data.main.temp_max} °C`;
     low.textContent = `${data.main.temp_min} °C`;
