@@ -115,7 +115,8 @@ function displayCourses(filteredCourses) {
     let creditsTodisplay = document.createElement("p");
     creditsTodisplay.setAttribute("id", "credits")
     filteredCourses.forEach(course => {
-        let name = document.createElement("p");
+        let name = document.createElement("button");
+        name.setAttribute("class", `${course.subject}${course.number}`)
         if (course.completed == true) {
             name.setAttribute("id", "completed");
         }
@@ -130,7 +131,7 @@ function displayCourses(filteredCourses) {
     document.querySelector(".credits").appendChild(creditsTodisplay)
 
 }
-// -21.517605167989498, -64.72949905980894
+
 const currentTemp = document.querySelector("#current-temp");
 const weatherIcon = document.querySelector("#weather-icon");
 const captionDesc = document.querySelector(".fig");
@@ -162,3 +163,56 @@ function displayResults (data) {
     weatherIcon.setAttribute('alt',`${data.weather[0].description}`);
     captionDesc.textContent = `${desc}`;
 }
+
+
+const courseDetails = document.querySelector("#course-details");
+const cse110 = document.querySelector(".CSE110");
+const cse111 = document.querySelector(".CSE111");
+const cse210 = document.querySelector(".CSE210");
+const wdd130 = document.querySelector(".WDD130");
+const wdd131 = document.querySelector(".WDD131");
+const wdd231 = document.querySelector(".WDD231");
+
+
+function displayCourseDetails(filteredCourse) {
+    filteredCourse.forEach(course => {
+        courseDetails.innerHTML = '';
+        courseDetails.innerHTML = `
+          <button id="closeModal">❌</button>
+          <h2>${course.subject} ${course.number}</h2>
+          <h3>${course.title}</h3>
+          <p><strong>Credits</strong>: ${course.credits}</p>
+          <p><strong>Certificate</strong>: ${course.certificate}</p>
+          <p>${course.description}</p>
+          <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        `;        
+    });
+    
+    courseDetails.showModal();
+
+    const closeModal = document.querySelector("#closeModal");
+    
+    closeModal.addEventListener("click", () => {
+      courseDetails.close();
+    });
+  }
+
+
+cse110.addEventListener('click', () => {
+    displayCourseDetails(courses.filter(course => course.number == 110));
+});
+cse111.addEventListener('click', () => {
+    displayCourseDetails(courses.filter(course => course.number == 111));
+});
+cse210.addEventListener('click', () => {
+    displayCourseDetails(courses.filter(course => course.number == 210));
+});
+wdd130.addEventListener('click', () => {
+    displayCourseDetails(courses.filter(course => course.number == 130));
+});
+wdd131.addEventListener('click', () => {
+    displayCourseDetails(courses.filter(course => course.number == 131));
+});
+wdd231.addEventListener('click', () => {
+    displayCourseDetails(courses.filter(course => course.number == 231));
+});

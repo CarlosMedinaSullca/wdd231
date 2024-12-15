@@ -12,8 +12,9 @@ currentyear.innerHTML = `<span>${today.getFullYear()}</span>`;
 const oLastModif = new Date(document.lastModified);
 lastModified.innerHTML = `<span>${oLastModif}</span>`
 
+// THE CODE BELOW IS INTENDED TO ADD DINAMICALLY MEMBERS CARDS TO THE DIRECTORY PAGE USING DATA FROM A JSON FILE.
 
-const cards = document.querySelector('.grid');
+const cards = document.querySelector('.grid'); // ***This grid class must be in all the pages of the website in order to preserve all the functionality of this JavaScript file***
 const greetings = document.createElement('h2');
 
 async function getMembersData() {
@@ -62,9 +63,11 @@ const displayMembers = (members) => {
     });
 }
 
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
+// THE CODE BELOW ENABLES THE OPTIONS OF GRID AND LIST TO SHOW THE CARDS TO SHOW THE MEMBERS OF THE CHAMBER
+
+const gridbutton = document.querySelector("#grid"); // ***This grid id must be in all the pages of the website in order to preserve all the functionality of this JavaScript file***
+const listbutton = document.querySelector("#list"); // ***This list id must be in all the pages of the website in order to preserve all the functionality of this JavaScript file***
+const display = document.querySelector("article");  // ***This article element must be in all the pages of the website in order to preserve all the functionality of this JavaScript file***
 
 gridbutton.addEventListener("click", ()=> {
     display.classList.add("grid");
@@ -78,20 +81,15 @@ function showList() {
     display.classList.add("grid");
 }
 
+// The code below is to show a weather card that shows many features of the weather in the current day
 
-
-const currentTemp = document.querySelector("#current-temp");
-const weatherIcon = document.querySelector("#weather-icon");
+const currentTemp = document.querySelector("#current-temp"); // ***This current-temp id must be in all the pages of the website in order to preserve all the functionality of this JavaScript file***
+const weatherIcon = document.querySelector("#weather-icon"); // ***This weather-icon id must be in all the pages of the website in order to preserve all the functionality of this JavaScript file***
 const captionDesc = document.querySelector(".fig");
 const high = document.querySelector("#high");
 const low = document.querySelector("#low");
 const humidity = document.querySelector("#humidity");
-const thisDay = document.querySelector('#today');
-const tomorrow = document.querySelector('#tomorrow1');
-const dayAfterTomorrow = document.querySelector('#tomorrow2');
-const thisDayTemp = document.querySelector('#todayTemp');
-const tomoTemp = document.querySelector('#tomTemp1');
-const dayAfterTomoTemp = document.querySelector('#tomTemp2');
+
 
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-21.52&lon=-64.73&units=metric&appid=48a9c5117dce7d7efbd2633a23faf9d3';
@@ -128,7 +126,15 @@ function displayResults (data) {
     humidity.textContent = `${data.main.humidity} %`;
 }
 
-const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// The code below is for the index page to show a three days forecast to show some weather features.
+const thisDay = document.querySelector('#today');
+const tomorrow = document.querySelector('#tomorrow1');
+const dayAfterTomorrow = document.querySelector('#tomorrow2');
+const thisDayTemp = document.querySelector('#todayTemp');
+const tomoTemp = document.querySelector('#tomTemp1');
+const dayAfterTomoTemp = document.querySelector('#tomTemp2');
+
+const daysOfWeek = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const dayOfWeek = daysOfWeek[today.getDay()];
 const tomorrow1 = daysOfWeek[today.getDay() + 1];
@@ -164,9 +170,9 @@ function displayForecastResults (data) {
     dayAfterTomoTemp.textContent = `${data.list[13].main.temp} °C`;        
 }
 
-// The code above is intended to display dinamically three random Gold or silver members of the chamber of commerc
+// The code below is intended to display dinamically three random Gold or silver members of the chamber of commerce
 
-const  spotCard= document.querySelector('.spot');
+const  spotCard= document.querySelector('.spot'); // ***This spot class must be in all the pages of the website in order to preserve all the functionality of this JavaScript file***
 async function getSpotMembersData() {
     const response = await fetch('data/members.json');
     const data = await response.json();
@@ -223,3 +229,73 @@ function randomMembers(list) {
     }
     
 }
+
+// THE CODE BELOW IS FOR THE JOIN PAGE TIMESTAMP
+
+function setTimestamp() {
+    var timestampField = document.querySelector("#timestamp");
+    var currentDateTime = new Date().toISOString();
+    timestampField.value = currentDateTime;
+}
+
+const submission = document.querySelector('#submit');
+
+submission.addEventListener( 'click', setTimestamp);
+
+// THE CODE BELOW IS FOR THE SHOW MODAL DIALOG THAT IS DISPLAYED WHEN THE "LEARN MORE" BUTTON OF THE MEMEBERHSIP CARDS IS CLICKED
+import {memberships} from '../data/memberships.js';
+console.log(memberships);
+
+// Gram a reference to the division we display the items
+const showHere = document.querySelector("#showHere");
+
+// Get a reference to the html dialog element
+
+const mydialog = document.querySelector("#mydialog");
+const myclose = document.querySelector("#mydialog button");
+const myTitle = document.querySelector("#mydialog h2");
+const membershipInfo = document.querySelector("#dialog");
+
+myclose.addEventListener("click", () =>mydialog.close());
+
+function displayItems(data){
+    console.log(data)
+    data.forEach(x => {
+        let membershipCard = document.createElement('section');
+        let membershipTitle = document.createElement('h3');
+        let button = document.createElement('button');
+        membershipTitle.innerHTML = `${x.level}`;
+        button.innerHTML= "Learn more";
+
+        membershipCard.appendChild(membershipTitle);
+        membershipCard.appendChild(button);         
+        showHere.appendChild(membershipCard);  
+        button.addEventListener("click", () => showStuff(x));     
+        
+    });
+}
+
+// Display membership cards
+
+displayItems(memberships)
+
+// Populate the dialog information when the button is clicked
+
+function showStuff(x) {
+    myTitle.innerHTML = x.level;
+    membershipInfo.innerHTML = `
+    <p>${x.description}</p>
+    <p>Cost: ${x.cost}</p>   
+    <p>Events: ${x.events}</p>   
+    <p>Training: ${x.training}</p>   
+    <p>Advertising: ${x.advertising}</p>
+    <p>Discounts: ${x.discounts}</p>               
+    `;
+    mydialog.showModal();
+}
+
+
+
+
+
+

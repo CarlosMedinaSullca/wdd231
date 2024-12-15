@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the Join page for the chamber of commerce of Bolivia">
+    <meta name="author" content="Carlos Medina">
+    <meta property="og:title" content=" Chamber of commerce join page - Carlos Medina">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://carlosmedinasullca.github.io/wdd231/chamber/images/logochamber.webp">
+    <meta property="og:url" content="https://carlosmedinasullca.github.io/wdd231/chamber/join.html">
+    <meta property="og:description" content="This is the Join page for the chamber of commerce of Bolivia">
+    <meta property="fb:app_id" content="your_app_id">
+
+    <meta name="twitter:card" content="summary" >
+    <meta name="twitter:title" content="Chamber of commerce join page - Carlos Medina" >
+    <meta name="twitter:description" content="This is the Join page for the chamber of commerce of Bolivia" >
+    <meta name="twitter:image" content="https://carlosmedinasullca.github.io/wdd231/chamber/images/logochamber.webp">
+    <title>Bolivia Chamber of commerce-Join page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="styles/chamber.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/chamber.js" type="module"></script>
+</head>
+<body onload="setTimestamp()">
+        <header>
+            <div>
+                <img src="images/logochamber.webp" alt="A logo of Bolivia chamber of commerce">         
+            </div>
+            <button id="hamMenu"></button>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html" title="Home" >Home</a></li>
+                    <li><a href="directory.html" title="Directory">Directory</a></li>
+                    <li><a href="#" title="Join" class="current-menu-item">Join</a></li>
+                    <li><a href="discover.html" title="Discover" >Discover</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="join">  
+
+            <div class="form">
+                <h2>Membership application form</h2>
+                <form method="GET" action="thankyou.html" class="designOne">
+                    <label>First name* <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                    <label>Last name* <input type="text" name="last" required autocomplete="family-name" title="Your last name"></label>
+                    <label>Organizationl title <input type="text" name="organization title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" title="Only alphabetic characters, hyphens, and spaces are allowed, with a minimum of seven characters."></label>
+                    <label>Email address <input type="email" name="email" required placeholder="john50@gmail.com" title="Your Email" autocomplete="email"></label>
+                    <label>Mobile phone number<input type="tel" name="phone" autocomplete="tel" title="A phone number with dashes" required placeholder="72-968-308"></label>
+                    <label>Business/Organization's name <input type="text" required name="Organization name" title="The name of the organization" autocomplete="organization"></label>
+                    <fieldset>
+                        <legend>Select membership level</legend>
+                        <label><input type="radio" name="membership level" value="NP membership" checked>NP membership</label>
+                        <label><input type="radio" name="membership level" value="Bronze membership">Bronze membership</label>
+                        <label><input type="radio" name="membership level" value="Silver membership">Silver membership</label>
+                        <label><input type="radio" name="membership level" value="Gold membership">Gold membership</label>
+                    </fieldset>
+                    <label>Business/organization description<textarea name="Organization description" title="The description of the organization of the member"></textarea></label>
+                    <label><input type="hidden" id="timestamp" name="timestamp"></label>
+                    <input type="submit" value="Join chamber of commerce" id="submit">               
+                </form>
+            </div>
+            <div id="showHere">
+                <h2>Membership Levels</h2>
+            </div>
+            <dialog id="mydialog">
+                <div id="title">
+                    <h2>Sample Title</h2>
+                    <button>X</button>
+                </div>
+                <div id="dialog">                  
+                </div>
+            </dialog>
+
+            <section class="info">                
+                <div class="inside weather">
+                    <h2>Current Weather</h2>
+                    <div class="wedata">                        
+                        <figure id="weather-icon"></figure>                         
+                        <div>
+                            <p> <span id="current-temp"></span></p>
+                            <p> <span class="fig"></span></p>
+                            <p>High: <span id="high"></span></p>
+                            <p>Low: <span id="low"></span></p>
+                            <p>Humidity: <span id="humidity"></span></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="inside">
+                    <h2>Weather Forecast</h2>
+                    <div class="forecast">
+                        <p><span id="today"></span><span id="todayTemp"></span></p>
+                        <p><span id="tomorrow1"></span><span id="tomTemp1"></span></p>
+                        <p><span id="tomorrow2"></span><span id="tomTemp2"></span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="grid">
+                <div class="menu">
+                    <button id="grid">⏹️Grid</button>
+                    <button id="list">📄List</button>
+                </div>
+            </section>
+            <div class="spot" id="spot"></div>            
+        </main>
+        <footer>
+            <div class="info first">
+                <p><strong>Bolivia chamber of commerce</strong></p>
+                <p>Isaac Attie street 420</p>
+                <p>info@boliviacc.org</p>
+                <p>+59172969309</p>
+            </div>
+            <div>
+                <img src="images/face.webp" alt="Facebook Logo">
+                <img src="images/in.webp" alt="LinkedInLogo">
+                <img src="images/you.webp" alt="YouTube Logo">
+            </div>
+            <div class="info">
+                <p>WDD231 Class Project</p>
+                <p>Carlos Medina</p>
+                <p>&copy; <span id="currentyear"></span> Bolivia chamber of commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+</body>
+</html>

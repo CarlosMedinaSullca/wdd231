@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the landing page for the chamber of commerce of Bolivia">
+    <meta name="description" content="This is the Join page for the chamber of commerce of Bolivia">
     <meta name="author" content="Carlos Medina">
-    <meta property="og:title" content=" Chamber of commerce landing page - Carlos Medina">
+    <meta property="og:title" content=" Chamber of commerce join page - Carlos Medina">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://carlosmedinasullca.github.io/wdd231/chamber/images/logochamber.webp">
-    <meta property="og:url" content="https://carlosmedinasullca.github.io/wdd231/chamber/index.html">
-    <meta property="og:description" content="This is the course home page for WDD231 subject">
+    <meta property="og:url" content="https://carlosmedinasullca.github.io/wdd231/chamber/join.html">
+    <meta property="og:description" content="This is the Join page for the chamber of commerce of Bolivia">
     <meta property="fb:app_id" content="your_app_id">
 
     <meta name="twitter:card" content="summary" >
-    <meta name="twitter:title" content="Course Home page - Carlos Medina" >
-    <meta name="twitter:description" content="This is the course home page for WDD231 subject" >
-    <meta name="twitter:image" content="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/vavqg3zbynb231htiyr6">
-    <title>Bolivia Chamber of commerce-Home page</title>
+    <meta name="twitter:title" content="Chamber of commerce join page - Carlos Medina" >
+    <meta name="twitter:description" content="This is the Join page for the chamber of commerce of Bolivia" >
+    <meta name="twitter:image" content="https://carlosmedinasullca.github.io/wdd231/chamber/images/logochamber.webp">
+    <title>Bolivia Chamber of commerce-Join page</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="styles/chamber.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-    <script src="scripts/chamber.js" type="module"></script>
+    <script src="scripts/chamber.js" defer></script>
 </head>
 <body >
         <header>
@@ -33,30 +33,15 @@
             <button id="hamMenu"></button>
             <nav class="navigation">
                 <ul>
-                    <li><a href="#" title="Home" class="current-menu-item">Home</a></li>
+                    <li><a href="index.html" title="Home" >Home</a></li>
                     <li><a href="directory.html" title="Directory">Directory</a></li>
                     <li><a href="join.html" title="Join">Join</a></li>
-                    <li><a href="discover.html" title="Discover">Discover</a></li>
+                    <li><a href="#" title="Discover" class="current-menu-item">Discover</a></li>
                 </ul>
             </nav>
         </header>
-        <main class="home">
-            <section class="hero">
-                <div>
-                    <h1>Find your next gold partner here!</h1>
-                    <p><strong>key contacts, make your Business visible <br>to important markets all over the country!</strong></p>
-                    <a href="Join.html" title="Join page">Join us!</a>
-                </div>
-                <picture>
-                    <source srcset="images/hero-large.webp" media=" (min-width: 800px) ">
-                    <img src="images/hero-small.webp" alt="A car in the middle of salar de Uyuni" width="1500" height="750">
-                </picture>
-                                
-            </section>
-            <section class="info">
-                <div class="inside">
-                    <h2>Events</h2>
-                </div>
+        <main class="join">            
+            <section class="info">                
                 <div class="inside weather">
                     <h2>Current Weather</h2>
                     <div class="wedata">                        
@@ -86,7 +71,7 @@
                     <button id="list">📄List</button>
                 </div>
             </section>
-            <div class="spot"></div>            
+            <div class="spot" id="spot"></div>            
         </main>
         <footer>
             <div class="info first">
