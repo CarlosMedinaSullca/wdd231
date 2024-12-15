@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/chamber.js" type="module"></script>
 </head>
 <body >
         <header>
@@ -35,12 +35,46 @@
                 <ul>
                     <li><a href="index.html" title="Home" >Home</a></li>
                     <li><a href="directory.html" title="Directory">Directory</a></li>
-                    <li><a href="yoin.html" title="Join">Join</a></li>
-                    <li><a href="discover.html" title="Discover" class="current-menu-item">Discover</a></li>
+                    <li><a href="join.html" title="Join" class="current-menu-item">Join</a></li>
+                    <li><a href="discover.html" title="Discover" >Discover</a></li>
                 </ul>
             </nav>
         </header>
-        <main>            
+        <main class="join">  
+
+            <!-- <div class="form">
+                <h2>Membership application form</h2>
+                <form method="GET" action="thankyou.html" class="designOne">
+                    <label>First name* <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                    <label>Last name* <input type="text" name="last" required autocomplete="family-name" title="Your last name"></label>
+                    <label>Organizationl title <input type="text" name="organization title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" title="Only alphabetic characters, hyphens, and spaces are allowed, with a minimum of seven characters."></label>
+                    <label>Email address <input type="email" name="email" required placeholder="john50@gmail.com" title="Your Email" autocomplete="email"></label>
+                    <label>Mobile phone number<input type="tel" name="phone" autocomplete="tel" title="A phone number with dashes" required placeholder="72-968-308"></label>
+                    <label>Business/Organization's name <input type="text" required name="Organization name" title="The name of the organization" autocomplete="organization"></label>
+                    <fieldset>
+                        <legend>Select membership level</legend>
+                        <label><input type="radio" name="membership level" value="NP membership" checked>NP membership</label>
+                        <label><input type="radio" name="membership level" value="Bronze membership">Bronze membership</label>
+                        <label><input type="radio" name="membership level" value="Silver membership">Silver membership</label>
+                        <label><input type="radio" name="membership level" value="Gold membership">Gold membership</label>
+                    </fieldset>
+                    <label>Business/organization description<textarea name="Organization description" title="The description of the organization of the member"></textarea></label>
+                    <label><input type="hidden" id="timestamp" name="timestamp"></label>
+                    <input type="submit" value="Join chamber of commerce" id="submit">               
+                </form>
+            </div>
+            <div id="showHere">
+                <h2>Membership Levels</h2>
+            </div>
+            <dialog id="mydialog">
+                <div id="title">
+                    <h2>Sample Title</h2>
+                    <button>X</button>
+                </div>
+                <div id="dialog">                  
+                </div>
+            </dialog> -->
+
             <section class="info">                
                 <div class="inside weather">
                     <h2>Current Weather</h2>
