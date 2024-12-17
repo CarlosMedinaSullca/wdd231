@@ -23,7 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/chamber.js" type="module"></script>
+    <script src = "scripts/discover.js" defer></script>
 </head>
 <body >
         <header>
@@ -40,7 +41,54 @@
                 </ul>
             </nav>
         </header>
-        <main>            
+        <main id="discover">
+            <section>
+                <div>
+                    <p><span class="message"></span></p>
+                </div>
+                <div>
+                    <h3>Demographics</h3>
+                </div>
+                <div>
+                    <h3>Events</h3>
+                </div>
+                <div>
+                    <h3>Attractions</h3>
+                </div>
+                <div>
+                    <h3>Calendar</h3>
+                </div>
+                <div>
+                    <h3>Statistical data</h3>
+                </div>
+            </section>
+            <section>
+                <h2>Discover the magic of this beautiful country</h2>
+                <figure>
+                    <img class="hover" src="images/oruro.webp" alt="Oruro carnival" loading="lazy">
+                    <figcaption>Oruro Carnival</figcaption>
+                </figure>
+                <figure>
+                    <img class="hover" src="images/paz.webp" alt="Titicaca lake in la paz Bolivia" loading="lazy">
+                    <figcaption>Titicaca lake - La paz, Bolivia</figcaption>
+                </figure>
+                <figure>
+                    <img class="hover" src="images/amazonia.webp" alt="Amazonia boliviana" loading="lazy">
+                    <figcaption>Bolivian Amazonia</figcaption>
+                </figure>
+                <figure>
+                    <img class="hover" src="images/cochabamba.webp" alt="Cochabamba Christh monument" loading="lazy">
+                    <figcaption>Christ monument - Cochabamba, Bolivia</figcaption>
+                </figure>
+                <figure>
+                    <img class="hover" src="images/tarija.webp" alt="Grapes plants in line" loading="lazy">
+                    <figcaption>Grape crops - Tarija, Bolivia</figcaption>
+                </figure>
+                <figure>
+                    <img class="hover" src="images/potosi.webp" alt="Uyuni salt flat" loading="lazy">
+                    <figcaption>Uyuni salt flat - Potosí, Bolivia</figcaption>
+                </figure>
+            </section>
             <section class="info">                
                 <div class="inside weather">
                     <h2>Current Weather</h2>
@@ -71,7 +119,8 @@
                     <button id="list">📄List</button>
                 </div>
             </section>
-            <div class="spot" id="spot"></div>            
+            <div class="spot" id="spot"></div>  
+                     
         </main>
         <footer>
             <div class="info first">

@@ -230,6 +230,8 @@ function randomMembers(list) {
     
 }
 
+
+
 // THE CODE BELOW IS FOR THE JOIN PAGE TIMESTAMP
 
 function setTimestamp() {
@@ -293,8 +295,6 @@ function showStuff(x) {
     `;
     mydialog.showModal();
 }
-
-
 
 
 
