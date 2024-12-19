@@ -1,0 +1,311 @@
+:root {
+    --primary-color1: rgb(43, 123, 156);
+    --primary-color2: rgb(10, 64, 64);
+    --primary-color3: rgb(43, 131, 140);
+    --secondary-color1: rgb(169, 237, 244);
+    --secondary-color2: rgb(147, 183, 191);
+    --secondary-color3: rgb(13, 13, 13);
+    --secondary-color4: rgb(242, 242, 242);
+    --accent1-color: rgb(226, 75, 5);
+    --accent2-color: rgb(189, 97, 192);
+
+    --paragraph-font: "Playfair Display", serif; 
+    --heading-font: "Roboto", sans-serif;
+}
+
+* {
+    font-family: var(--heading-font);
+	margin: 0 auto;
+}
+
+h1 {
+	color: white;
+}
+
+h2 {
+    
+    font-weight:500;
+    color: black;
+    text-align: center;
+}
+header {
+	background-color: var(--accent1-color);
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px var(--accent1-color);
+}
+
+
+main {
+	margin: 1rem auto;
+	display: grid;
+    grid-gap: 1rem;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem ;
+    grid-template-columns: 100%;
+    justify-items: center;
+}
+
+div {
+    display: grid;
+    justify-items: center;
+}
+
+main p {
+    text-align: justify;
+    text-justify:inter-word;
+}
+
+input[type="button"],
+input[type="submit"]
+ {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: var(--accent1-color);
+    border-color: var(--accent1-color);
+    border-radius: 0.3rem;
+    color: var(--secondary-color4);
+}
+
+.homeForm {
+    display: grid;
+    padding: 1rem 0;
+    gap: 0.5rem;
+}
+
+#hamMenu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: var(--secondary-color4);
+ 	position: absolute;
+	top: 1rem;
+    right: 1rem;
+}
+
+#hamMenu::before {
+	content: "≡";
+    
+}
+
+#hamMenu.open::before {
+	content: "⬅️";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: var(--accent1-color);
+	color: var(--secondary-color4);
+}
+
+.navigation a {
+	display: none;
+	padding: 0.5rem;
+	text-align: center;
+	text-decoration: none;
+	color: var(--secondary-color4);
+}
+.navigation a:hover {
+	background-color: var(--secondary-color2);
+	color: var(--secondary-color3);
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+
+select:hover {
+	background-color: var(--secondary-color2);
+	color: var(--secondary-color3);
+	font-weight: 700;
+}
+
+.open select {
+    display: block;
+}
+
+.current-menu-item {
+    background-color: var(--primary-color1);
+    color: var(--primary-color2);
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: var(--accent1-color);
+    align-content: center;
+    color: var(--secondary-color4);   
+    text-decoration: none; 
+}
+
+footer p {
+    padding: 0.2rem;
+}
+ 
+p {
+    padding: 1.5rem;
+}
+
+.logo {
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    padding: 0.3rem;
+    color: var(--secondary-color4)
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.products div {
+    position: relative;
+}
+
+.productfirst a {
+    position:absolute;
+    top:3em;
+    z-index: 1;
+    color:var(--secondary-color3);
+    font-size: 2rem;
+}
+
+.products img {
+    opacity: 0.7;
+}
+
+.productfirst a:hover {
+    color: var(--accent2-color);
+}
+
+.products #returnBox {
+    color: var(--secondary-color3);
+    background-color: var(--primary-color3);
+    color: var(--secondary-color4)
+
+}
+
+.products #returnBox:hover {
+    background-color: var(--accent2-color);
+    color:var(--secondary-color3)   
+    
+}
+
+.newCard {
+    margin: 1rem;
+    padding: 1rem;
+    /*border:solid 1px;*/
+    box-shadow: -0.1em 0 0.8em gray;
+}
+
+.newSpace {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+}
+
+.newCard p {
+    padding: 0.5rem;  
+}
+
+.newCard h4 {
+    padding:0.5rem;
+}
+
+.newCard h3 {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--primary-color3);
+    width: 100%;
+    text-align: center;
+    color: var(--secondary-color4);
+    border-bottom: solid var(--primary-color1) 1px;
+    border-left: solid var(--primary-color1) 1px;
+    border-right: solid var(--primary-color1) 1px;
+}
+
+
+.contactPage {
+    display: grid;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 4rem;
+}
+.contactPage h1 {
+    background-color: var(--primary-color3);
+    width:100%;
+    text-align: center;
+    padding: 5rem 0;
+    margin-top: 0rem;
+}
+
+.contactbox {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 15rem;
+    height: 10rem;
+    background-color: var(--secondary-color4);
+    box-shadow: -0.1em 0 0.8em gray;
+}
+
+iframe {
+    padding: 1rem 0;
+    width: 25rem;
+    height: 20rem;
+}
+
+.form {
+    display: grid;
+    background-color: var(--secondary-color2);
+    padding: 1rem;
+
+}
+
+.form label,h2 {
+    display: block;
+    padding-top: 1.5rem;
+    color:var(--secondary-color3);
+
+}
+
+.form input[type="text"],
+.form input[type="email"]
+{
+    background-color: var(--secondary-color4);
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    color:var(--secondary-color3);
+    appearance: none;
+    padding: 0.5rem 2rem;
+}
+
+.form textarea {
+    background-color:var(--secondary-color4);
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    color:var(--secondary-color3);
+    appearance: none;
+    padding: 0.5rem 2rem;
+}
+
+#formButton {
+    background-color: #eee;
+    border: solid 1px #999;
+    border-radius: 6px;
+    color:var(--secondary-color3);
+    padding: 0.5rem;
+    margin-top: 0.7rem;
+
+}
