@@ -44,6 +44,7 @@ main {
 	padding-bottom: 2.5rem ;
     grid-template-columns: 100%;
     justify-items: center;
+    min-height: 250px;
 }
 
 div {
@@ -85,11 +86,24 @@ input[type="submit"]
 
 #hamMenu::before {
 	content: "≡";
+    font-size: 30px;
     
 }
 
 #hamMenu.open::before {
 	content: "⬅️";
+}
+
+header div {
+    display: flex;    
+    align-items: center;
+}
+
+header div h1{
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    font-size: 23px;
 }
 
 .navigation {
@@ -106,6 +120,7 @@ input[type="submit"]
 	text-align: center;
 	text-decoration: none;
 	color: var(--secondary-color4);
+    /* border: 1px solid red */
 }
 .navigation a:hover {
 	background-color: var(--secondary-color2);
@@ -271,15 +286,25 @@ iframe {
 
 }
 
-.form label,h2 {
-    display: block;
-    padding-top: 1.5rem;
-    color:var(--secondary-color3);
-
+.sent {
+    display: grid;
+    gap: 1rem;
+    background-color: var(--secondary-color2);
+    padding: 1.5rem;
+    
 }
 
-.form input[type="text"],
-.form input[type="email"]
+
+
+.sent label, h2 {
+    display: block;
+    color:var(--secondary-color3);
+    width: 100%;
+    
+}
+
+.sent input[type="text"],
+.sent input[type="email"]
 {
     background-color: var(--secondary-color4);
     display: block;
@@ -287,17 +312,22 @@ iframe {
     border-radius: 6px;
     color:var(--secondary-color3);
     appearance: none;
-    padding: 0.5rem 2rem;
+    width: 100%;
+    height: 2rem;
+    margin: 0.5rem 0;
+    
 }
 
-.form textarea {
+.sent textarea {
     background-color:var(--secondary-color4);
     display: block;
     border: solid 1px #999;
     border-radius: 6px;
     color:var(--secondary-color3);
     appearance: none;
-    padding: 0.5rem 2rem;
+    width: 100%;
+    margin: 0.5rem 0;
+    
 }
 
 #formButton {
@@ -308,4 +338,14 @@ iframe {
     padding: 0.5rem;
     margin-top: 0.7rem;
 
+}
+
+/* The code bellow is to style the thanks page */
+
+.thanks .productfirst{
+    display: none;
+}
+
+.thanks h1{
+    color: black;
 }

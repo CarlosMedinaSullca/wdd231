@@ -211,7 +211,7 @@ const esenOil= document.querySelector("#essential")
 const carryOil= document.querySelector("#carrier")
 const natural= document.querySelector("#natural")
 const electronic= document.querySelector("#humidifiers")
-const discount= document.querySelector("#discount")
+
 
 esenOil.addEventListener("click", () => {
 	createProductCard(allProducts.filter(product => product.ProdCategory == 1  
@@ -234,10 +234,7 @@ electronic.addEventListener("click", () => {
 	));
   });
 
-discount.addEventListener("click", () => {
-	createProductCard(allProducts.filter(product => product.ProdCategory == 1  
-	));
-  });
+
 
 
 function createProductCard(filteredProducts) {
@@ -266,6 +263,7 @@ function createProductCard(filteredProducts) {
         let smallDescription = document.createElement("p");
 		let productCost = document.createElement("p");
         let img = document.createElement("img");
+		img.setAttribute("loading", "lazy");
 
         name.textContent = product.productName;
         varietyPlant.innerHTML = `<span class="label">Variety:</span> ${product.variety}`;
@@ -291,3 +289,27 @@ function createProductCard(filteredProducts) {
 	document.querySelector(".products").appendChild(returnMain2);
 }
 
+
+
+const currentUrl = window.location.href;
+
+const everything = currentUrl.split('?');
+
+let formData = everything[1].split('&');
+console.log(formData);
+
+function show(cup) {
+	formData.forEach((element) => {
+		if (element.startsWith(cup)){
+			result = element.split('=')[1].replace("%40", "@").replaceAll("+"," ").replace("%3F","");
+		}
+	});
+	return result
+}
+
+const showInfo = document.querySelector("#results");
+
+showInfo.innerHTML = `<h3>Hello ${show('name')} thank you for sending your message</h3>
+<p>Your message is: ${show('message')}</p>
+<p>We will replay to this email: ${show('email')} as soon as possible</p>
+`;

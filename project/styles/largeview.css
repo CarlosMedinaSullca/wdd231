@@ -25,18 +25,24 @@
 	.navigation {
 		flex-direction: row;
 		background-color: transparent;
-        
+		       
 	}
 	.navigation a {
         display: block;
-		flex: 1 1 100%;
         color: var(--secondary-color4);
-        padding: 1.5rem;
+        padding: 1rem;
         text-decoration: none;
 	}
     .navigation a:hover {
         text-decoration:wavy;
     }
+	header div h1{
+		font-size: 30px;
+	}
+
+	main {
+		min-height: 400px;
+	}
 
 	select {
 		display: block;

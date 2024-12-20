@@ -22,6 +22,10 @@
 		align-items: center;
 		justify-content: space-between;
 	}
+
+	header div h1{
+		font-size: 30px;
+	}
 	
 	.navigation {
 		flex-direction: row;
@@ -30,14 +34,18 @@
 	}
 	.navigation a {
         display: block;
-		flex: 1 1 100%;
+		/* flex: 1 1 100%; */
         color: var(--secondary-color4);
-        padding: 1.5rem;
+        padding: 0.6rem;
         text-decoration: none;
 	}
     .navigation a:hover {
         text-decoration:wavy;
     }
+
+	main {
+		min-height: 400px;
+	}
 
 	select {
 		display: block;
